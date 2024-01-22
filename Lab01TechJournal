@@ -1,0 +1,22 @@
+* Click on "actions" in the top right corner of the fw VM, and then click "Edit settings"
+* Network adapter 1 should be set to the WAN and network adapter 2 should be set to the LAN
+* Power on the VM open up a console and make sure to check that the interfaces match, with the WAN being the first one and the LAN being the second one
+* The console will have a menu with options, select the first option to reassign the network interfaces
+* Do not configure VLANs and change the WAN interface name to em0 and the LAN interface name to em1 and click yes when prompted to proceed
+* You will then be brought back to the console menu, this time select the second option to set the interface IP addresses
+* Select the interface whose address you want to change
+* Do not use DHCP for the WAN IPv4B address
+* Enter in the subnet mask and the upstream gateway
+* Do not use IPv6 and respond no to DHCP and to HTTP for the GUI
+* For the LAN, do not enable DHCP, IPv6, LAN DHCP server, and do not revert to HTTP
+
+* Click on "actions" in the top right corner of the wks01 VM, and then click "Edit settings"
+* The network adapter should be set to your LAN
+* Add a new administrator account and then log in to that account
+* Make sure that the network configurations are set properly
+* Open a browser and go to the fw LAN address
+* Log in using the same password as the PfSense console from earlier
+* Skip through the wizard but make sure to leave the setting checked to override the DNS server and uncheck the option to block private networks from entering via WAN
+
+Commands used:
+* Basic CLI commands (ping, whoami, hostname, ipconfig /all)
