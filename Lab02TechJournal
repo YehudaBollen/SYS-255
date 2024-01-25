@@ -1,0 +1,9 @@
+* Made sure that wks01 could ping champlain.edu
+* Adjusted thernetwork adapter to be on my LAN
+* Changed the admin password
+* Set the IPaddress, Subnet mask, default gateway, and NDS
+* Changed the name of the workstation to ad01-yehuda and made sure that the time was set properly 
+* Made sure that the changes to the name of the workstation had worked and the there was external connectivity
+* Installed the featurs required for Active Directory Domain Services
+* Clicked "Promote this server to a doamin controller"
+* Added a new 
