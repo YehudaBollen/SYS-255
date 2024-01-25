@@ -1,9 +1,21 @@
 * Made sure that wks01 could ping champlain.edu
-* Adjusted thernetwork adapter to be on my LAN
+* Adjusted the network adapter to be on my LAN
 * Changed the admin password
-* Set the IPaddress, Subnet mask, default gateway, and NDS
+* Set the IP address, Subnet mask, default gateway, and NDS
 * Changed the name of the workstation to ad01-yehuda and made sure that the time was set properly 
-* Made sure that the changes to the name of the workstation had worked and the there was external connectivity
-* Installed the featurs required for Active Directory Domain Services
-* Clicked "Promote this server to a doamin controller"
-* Added a new 
+* Made sure that the changes to the name of the workstation had worked and that there was external connectivity
+* Installed the features required for Active Directory Domain Services
+* Clicked "Promote this server to a domain controller"
+* Added a new forest with the root domain name "yehuda.local"
+* Set the DSRM password
+* Restarted the machine to allow the changes to take effect
+* Went to the DNS manager and tried to add a New Host but it didn't work because the reference reverse lookup zone cannot be found
+* Went to Reverse Lookup zones in the DNS manager and created a new zone with the network ID 10.5.0
+* Went to the entries for fw01 and ad01 and unchecked and checked the box for "update associated pointer record"
+* Both should now be in the new reverse lookup zone
+* Went to the "ad ds" section in the server manager
+* Clicked on "Active Directory Users and Computers"
+* Went to the users folder and created 2 new users, and added one to the domain admin group
+* Went to wks01 and set its DNS to be 10.0.5.5
+* Preformed a few pings and nslookups to make sure that I was to ping by hostname
+* Went to the control panel for wks01 and added it to my domain
