@@ -18,4 +18,4 @@
 * Went to the users folder and created 2 new users, and added one to the domain admin group
 * Went to wks01 and set its DNS to be 10.0.5.5
 * Preformed a few pings and nslookups to make sure that I was to ping by hostname
-* Went to the control panel for wks01 and added it to my domain
+* Went to the control panel for wks01 and added it to my domain 
