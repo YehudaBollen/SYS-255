@@ -1,0 +1,30 @@
+* To set network configurations, type the commmand nmtui
+* This will take you to a GUI which will allow youto configure networkj settings
+* A menu will pop up with 3 options, choose "edit a connection"
+* This will take you to a screen with a profile listy, the only profile should be yours
+* Navigate using the arrow keys and set the IP address (10.0.5.3/24), gateway address(10.0.5.2), DNS servers (10.0.5.5), and seach domains (name.local)
+* Exit by hitting the "ok" button
+* This will take you back to the profile list
+* Hit the back button to go back to the main menu
+* This time select "set system hostname"
+* Set the hostname to "dhcp01-name"
+* Hit quit to exitr the gui
+* To make the changes take effect, type the command "systemctl restart network"
+* Type exit to logout and log back in as root
+* Type the command "useradd <firstname> to add a new user
+* Type the command passwd <username> to set the password for the new user
+* Type the command usermod -aG wheel <username> to add it to the group wheel
+* Type exit to logout and log back in to the user we just created
+* Add A and PTR records for dhcp01 to the dns configuration on ad01 by going to the dns manager and expand the Forward Lookup Zones
+* Right-click on the folder named <yourname>.local and click "New Host"
+* Enter in the host name (dhcp01-<yourname>) and the IP address
+* To start an SSH connection from wks01 to dhcp01, use the command "ssh <yourname>@dhcp01-<yourname>
+* Use the command "history | head -n *" to see a specific amount of commands from the start of your bash with * being the number of commands you want to see
+
+New Commands:
+* ls -la !
+  Used to list hidden files
+* groups
+  See which groups a user belongs to
+* sudo -i
+  maintain a privelaged state
