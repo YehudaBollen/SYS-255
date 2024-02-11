@@ -1,0 +1,4 @@
+* To disable root access to ssh, you will need to edit the file "/etc/ssh/sshd_config"
+* Use a text editor (nano is the best) and open the file in it
+* Find the line that says "PermitRootLogin yes" and change yes to no
+* This will disable root ssh logins
