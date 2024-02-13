@@ -1,0 +1,19 @@
+* rwx are the types of permission, read write and execute. These permission can be assigned to a user, group, and other.
+* In binary it is 100 for read, 10 for write, and 1 for execute. You can change file permission using the binary by converting it to decimal.
+
+
+Commands:
+usermod -aG <group name> <username>
+  *This adds a user to a specified group
+
+groupadd <group name>
+  *This creates a new group
+
+chown <account name to own> <file path>
+  *Changes ownership of a file
+
+chmod <the permission you want to change, u for user, g for group, o for other, a for all> <- or + to take away or add perms> <r or w or x depending on which ones you want to change> <file path>
+  *Changes permissions of a file
+
+chgrp <group name> <file path>
+  Changes the group of a file
