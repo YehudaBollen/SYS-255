@@ -1,0 +1,5 @@
+* The file /etc/dhcp/dhcpd.conf is where configurations for dhcp are set.
+* Whenever making any changes to this file make sure to run the command systemctl restart dhcpd to make the cvhanges take effect
+* systemctl status dhcpd will tell you the status of your dhcp server
+* systemctl enable dhcpd will enable this service to tstart on boot. This needs to be done for every new service.
+* firewall-cmd --add-service=dhcp --permanent. This command will permamnently add ther ports associated with dhcp. make sure to run the command firewall-cmd --reload
