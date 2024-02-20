@@ -1,0 +1,17 @@
+* From within Server Manager, go to tools and then "Active Directory Users and Computers"
+* Right-click on your domain and click New and then Organizational Unit
+* Name it SYS255 and then create 3 more within that one called accounts computers and groups
+* In accounts create three new users, Alice, Bob, and Charlie
+* Then go to the computers folder under the domain and drag WKS01 into the new Computers OU
+* Within the groups OU, create a global security group named custom-desktop and add Alice and Bob and members
+* Next go to the tools drop-down in the server manager and click Group Policy Management 
+* Right-click on the SYS255 OU and click Create a GPO named SYS255-desktop
+* Add custom-desktop to the security filter, remove Authenticated users, and add Domain Computers
+* Click on the delegation tab, advanced, and select deny for Apply Group Policy for Domain Computers
+* Right-click on the SYS255 GPO and click edit 
+* Click on Remove Recycle Bin Icon from desktop and click Edit Policy settings and hit enable
+* Within the SYS255\Computers OU, create a new GPO called DisableLastLogin and then right-click on it and click edit
+* in Policies\WindowsSettings\SecuritySettings\LocalPolocies click on Interactive logon: Don't display last signed-in and enable it
+
+
+My plan for the assessment is to study the previous labs and make sure that all of my tech journals cover all the lab steps and are well-explained
