@@ -1,0 +1,15 @@
+* Use the command "sconfig" to access the network settings and to domain join the machine
+* Make sure that Remote Connections are enabled
+* On AD02 go to the Remote Server Administration Tools and add the File Service Tool File Server Resource Manager tools
+* Next go to the server manager and right click on "All Servers" and click Add Servers
+* Search for the file share VM and add it
+* ON AD02 create an OU structure called "SYS-255" with three sub-groups called "Computers", "users", and "Groups"
+* In Groups create a new global security group called Sales
+* Create two new standard domain users in the users group named Alice and Bob and add Alice to the Sales group
+* In Server Manager go to All Sevres and right-click on the file share server
+* Click "Add roles and features" and add the File Service Tool File Server Resource Manager tools
+* On the File Server VM run the command "netsh advfirewall set rule group="Remote File Server Resource Manager Management" new enable=yes"
+* On AD02 go to Server Manager and click on File and Storage Services and then Servers and right-click to add the file share server
+* Next click on shares and add a new share. Choose the SMB Quick Share option and choose the fs01 server and don't mess with the Select by volume option
+* Create a share named Sales and then finish and configure
+* In customized permission assign the sales users group with full control custom permissions to the share and add the user Alice
