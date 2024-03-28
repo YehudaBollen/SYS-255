@@ -1,0 +1,8 @@
+* Disbale remote root ssh access by editing the /tc/ssh/sshd_config file and change the PermitRootLogin flag to no
+* Use yum to install the httpd packet, and then run the following commands:
+  firewal-cmd --zone=public --add-service=http
+  firewal-cmd --zone=public --add-service=https
+  firewal-cmd --zone=public --permanent --add-service=http
+  firewal-cmd --zone=public --permanent --add-service=https
+
+* The command "firewall-cmd --list-all" can be run to verify this.
