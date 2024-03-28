@@ -1,0 +1,3 @@
+* To domain join a linux machine. run this command. "sudo yum install -y realmd samba samba-common oddjob-mkhomedir sssd"
+*  After that run "realm join --user=administartor@yehuda.local yehuda.local 
+* The command "realm list" can verify if it worked
