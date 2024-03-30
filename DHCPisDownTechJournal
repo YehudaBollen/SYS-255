@@ -1,0 +1,24 @@
+* Go to the server manager on the active directory machine
+* Click on "All Servers" and select the fs-01 machine
+* Right click and select add features and roles and click thorugh till server selection and selct the fs01
+* For server roles select DHCP server
+* Click through the rest and install it
+* Click complete DCHP configuration
+* Click through the wizard and close it when done
+* In the new DHCP tab, select the file server and go to add roles and features
+* Click through till server selection and select the active directory
+* Click on features and go to remote server administration tools
+* Under that click on role administrators tools and under that click dhcp server tools and install those
+* Click on tools and click on DHCP
+* Right click on DHCP and add server
+* Click on autrhorize the DHCP server and click through to the end
+* Right click on 1pv4 and click new scope
+* Name the scope whatever you want
+* Set the IP range as 10.0.5.100 - 10.0.5.150
+* Set the length as 24 and click next
+* Don't exclude any addresses
+* Dont' change the lease time
+* Set the router IP as 10.0.5.2 and add that
+* Set the parent domain as yehuda.local and add the server IP address 10.0.5.6
+* No wins servers and finish the wizard
+* On wks01, make sure to run ipconfig /release and ipconfig /renew to make the changes take effect
